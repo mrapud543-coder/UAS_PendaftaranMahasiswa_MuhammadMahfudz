@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Pengaturan karakter dan tampilan responsif -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul halaman yang tampil di tab browser -->
+    <title>Pendaftaran Mahasiswa Baru</title>
+    <!-- Menghubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="css/indexstyle.css">
+</head>
+<body>
+    <!-- Container utama yang membungkus seluruh isi halaman -->
+    <div class="container">
+        <!-- Judul utama halaman -->
+        <h1>Pendaftaran Mahasiswa Baru Politeknik LP3I</h1>
+        <!-- Subjudul / deskripsi singkat -->
+        <p class="subtitle">
+            Sistem pendaftaran menggunakan HTML, CSS, JavaScript dan jQuery
+        </p>
+        <!-- Form pendaftaran mahasiswa -->
+        <form id="formPendaftaran"
+              action="Tampil.php"
+              method="POST"
+              enctype="multipart/form-data">
+            <!-- ===================================================== -->
+            <!-- BAGIAN DATA MAHASISWA -->
+            <!-- ===================================================== -->
+            <div class="form-section">
+                <div class="section-title">
+                    Data Mahasiswa
+                </div>
+                <div class="grid">
+                    <!-- Input NIM -->
+                    <div class="form-group">
+                        <label>NIM</label>
+                        <input type="text"
+                               name="nim"
+                               id="nim"
+                               placeholder="Masukkan NIM">
+                    </div>
+                    <!-- Input Nama Lengkap -->
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text"
+                               name="nama"
+                               id="nama"
+                               placeholder="Masukkan nama lengkap">
+                    </div>
+                    <!-- Input Email -->
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email"
+                               name="email"
+                               id="email"
+                               placeholder="nama@gmail.com">
+                    </div>
+                    <!-- Input Nomor HP -->
+                    <div class="form-group">
+                        <label>Nomor HP</label>
+                        <input type="text"
+                               name="hp"
+                               id="hp"
+                               placeholder="Masukkan nomor HP">
+                    </div>
+                </div>
+            </div>
+            <!-- ===================================================== -->
+            <!-- BAGIAN INFORMASI AKADEMIK -->
+            <!-- ===================================================== -->
+            <div class="form-section">
+                <div class="section-title">
+                    Informasi Akademik
+                </div>
+                <!-- Pilihan jenis kelamin -->
+                <div class="form-group">
+                    <label>Jenis Kelamin</label>
+                    <div class="radio-area">
+                        <!-- Radio button laki-laki -->
+                        <label class="inline">
+                            <input type="radio"
+                                   name="jk"
+                                   value="Laki-laki">
+                            Laki-laki
+                        </label>
+                        <!-- Radio button perempuan -->
+                        <label class="inline">
+                            <input type="radio"
+                                   name="jk"
+                                   value="Perempuan">
+                            Perempuan
+                        </label>
+                    </div>
+                </div>
+                <div class="grid">
+                    <!-- Pilihan Program Studi -->
+                    <div class="form-group">
+                        <label>Program Studi</label>
+                        <select name="prodi" id="prodi">
+                            <option value="">
+                                -- Pilih Program Studi --
+                            </option>
+                            <option value="Manajemen Informatika">
+                                Manajemen Informatika
+                            </option>
+                            <option value="Teknik Komputer">
+                                Teknik Komputer
+                            </option>
+                        </select>
+                    </div>
+                    <!-- Pilihan Konsentrasi -->
+                    <div class="form-group">
+                        <label>Konsentrasi</label>
+                        <select name="konsentrasi" id="konsentrasi">
+                            <option value="">
+                                -- Pilih Konsentrasi --
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- ===================================================== -->
+            <!-- BAGIAN ALAMAT MAHASISWA -->
+            <!-- ===================================================== -->
+            <div class="form-section">
+                <div class="section-title">
+                    Alamat Mahasiswa
+                </div>
+                <div class="form-group">
+
+                    <!-- Textarea untuk alamat lengkap -->
+                    <textarea name="alamat"
+                              id="alamat"
+                              placeholder="Masukkan alamat lengkap"></textarea>
+                </div>
+            </div>
+            <!-- ===================================================== -->
+            <!-- BAGIAN UPLOAD FOTO -->
+            <!-- ===================================================== -->
+            <div class="form-section">
+                <div class="section-title">
+                    Upload Foto
+                </div>
+                <div class="foto-area">
+                    <div>
+                        <!-- Input upload foto -->
+                        <label>
+                            Pas Foto (JPG/JPEG/PNG Maks 2MB)
+                        </label>
+                        <input type="file"
+                               id="foto"
+                               name="foto"
+                               accept="image/png,image/jpeg,image/jpg">
+                    </div>
+                    <!-- Preview foto yang dipilih -->
+                    <img id="previewFoto"
+                         src="img/default-avatar.svg"
+                         alt="Preview Foto">
+                </div>
+            </div>
+            <!-- ===================================================== -->
+            <!-- BAGIAN TOMBOL AKSI -->
+            <!-- ===================================================== -->
+            <div class="button-area">
+                <!-- Tombol kirim data -->
+                <button type="submit" class="btn-submit">
+                    Daftar Sekarang
+                </button>
+                <!-- Tombol reset form -->
+                <button type="reset"
+                        id="resetBtn"
+                        class="btn-reset">
+                    Reset
+                </button>
+            </div>
+        </form>
+        <!-- Tempat menampilkan hasil proses secara dinamis -->
+        <div id="hasil" style="display:none"></div>
+    </div>
+    <!-- ===================================================== -->
+    <!-- FILE JAVASCRIPT -->
+    <!-- ===================================================== -->
+    <!-- Library jQuery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Plugin jQuery Validation -->
+    <script src="js/jquery.validate.min.js"></script>
+    <!-- File JavaScript utama -->
+    <script src="js/script.js"></script>
+</body>
+</html>
