@@ -1,0 +1,184 @@
+/* Reset dasar dan font */
+*{
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+/* Background halaman */
+body{
+    margin:0;
+    min-height:100vh;
+    background: linear-gradient(135deg,#111827,#312e81,#4f46e5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/* Container utama */
+.container{
+    width:650px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    padding:35px;
+    border-radius:25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.35);
+    border: 1px solid rgba(255,255,255,.25);
+}
+/* Judul utama */
+h1{
+    text-align:center;
+    color:white;
+    font-size:32px;
+}
+/* Subjudul */
+.subtitle{
+    text-align:center;
+    color:#ddd;
+    margin-bottom:30px;
+}
+/* Label form */
+label{
+    color:white;
+    font-weight:600;
+}
+/* Input, select, textarea */
+input, select, textarea{
+    width:100%;
+    padding:14px;
+    margin-top:8px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:rgba(255,255,255,.18);
+    color:white;
+}
+/* Warna option */
+option{
+    color:black;
+}
+/* Area alamat */
+textarea{
+    height:100px;
+    resize:none;
+}
+/* Section form */
+.form-section{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.20);
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:20px;
+}
+/* Judul section */
+.section-title{
+    color:white;
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:15px;
+    padding-bottom:8px;
+}
+/* Grup input */
+.form-group{
+    margin-bottom:18px;
+}
+/* Area radio button */
+.radio-area{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    margin-top:10px;
+}
+/* Label radio */
+.inline{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:white;
+}
+/* Ukuran radio */
+.inline input[type="radio"]{
+    width:18px;
+    height:18px;
+}
+/* Grid 2 kolom */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+/* Area upload foto */
+.foto-area{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    padding:25px;
+    border-radius:18px;
+}
+/* Preview foto */
+#previewFoto{
+    width:120px;
+    height:160px;
+    object-fit:cover;
+    border-radius:8px;
+}
+/* Area tombol */
+.button-area{
+    margin-top:25px;
+}
+/* Hover input */
+input:hover,
+select:hover,
+textarea:hover{
+    background:rgba(255,255,255,.25);
+}
+/* Focus input */
+input:focus,
+select:focus,
+textarea:focus{
+    border:2px solid #818cf8;
+}
+/* Animasi card */
+.form-section,
+.foto-area{
+    transition:.3s ease;
+}
+/* Hover card */
+.form-section:hover,
+.foto-area:hover{
+    transform:translateY(-3px);
+}
+/* Responsive mobile */
+@media(max-width:700px){
+    .container{
+        width:90%;
+    }
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+/* Tombol submit */
+.btn-submit{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#6366f1,#9333ea);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+/* Tombol reset */
+.btn-reset{
+    margin-top:10px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background:#fff;
+    color:#333;
+    cursor:pointer;
+}
+/* Input upload file */
+input[type="file"]{
+    padding:10px;
+    cursor:pointer;
+}
